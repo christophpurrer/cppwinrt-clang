@@ -1,6 +1,4 @@
 #include "pch.h"
-#pragma comment(lib, "windowsapp")
-
 using namespace winrt;
 using namespace Windows::Foundation;
 
