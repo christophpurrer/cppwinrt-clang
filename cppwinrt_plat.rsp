@@ -82,4 +82,4 @@
 -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.UI.Xaml.Core.Direct.XamlDirectContract\2.0.0.0\Windows.UI.Xaml.Core.Direct.XamlDirectContract.winmd"
 -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.UI.Xaml.Hosting.HostingContract\4.0.0.0\Windows.UI.Xaml.Hosting.HostingContract.winmd"
 -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract\2.0.0.0\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract.winmd" 
--out "gen"
+-out "Generated Files"
