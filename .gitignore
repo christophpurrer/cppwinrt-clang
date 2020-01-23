@@ -1,2 +1,5 @@
 gen
 build
+x64
+packages
+.vs
