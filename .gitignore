@@ -3,3 +3,4 @@ build
 x64
 packages
 .vs
+/cppwinrt-clang.vcxproj.user
