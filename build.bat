@@ -1,3 +1,5 @@
+set WINDOWS_SDK=C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0
+
 @echo Generate C++/WinRT header files
 cppwinrt.exe @cppwinrt_plat.rsp
 
@@ -8,7 +10,8 @@ if not exist build mkdir build
 clang -v
 
 @echo Create binary
-clang -I "Generated Files" -D_WINDOWS -DUNICODE -D_UNICODE -DWIN32_LEAN_AND_MEAN -DWINRT_LEAN_AND_MEAN -DMDd main.cpp -Xclang -std=c++2a -Xclang -Wno-delete-non-virtual-dtor -o build\cppwinrt-clang.exe -L "C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0\um\x64" -Wl,kernel32.lib,user32.lib,windowsapp.lib -DMANIFEST -DMANIFESTUAC:"level='asInvoker' uiAccess='false'"
+clang -I "Generated Files" -D_WINDOWS -DUNICODE -D_UNICODE main.cpp -Xclang -std=c++2a -Xclang -Wno-delete-non-virtual-dtor -o build\cppwinrt-clang.exe -L "%WINDOWS_SDK%\um\x64" -Wl,kernel32.lib,user32.lib,windowsapp.lib
 
 @echo Embed manifest
+:: https://docs.microsoft.com/en-us/cpp/build/how-to-embed-a-manifest-inside-a-c-cpp-application?view=vs-2019
 "C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64\mt.exe" -manifest cppwinrt.manifest -outputresource:build\cppwinrt-clang.exe;1
