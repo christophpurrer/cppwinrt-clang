@@ -42,3 +42,4 @@ https://docs.microsoft.com/en-us/cpp/build/how-to-embed-a-manifest-inside-a-c-cp
 ```
 
 **cppwinrt-clang.exe** will appear in the **build** output folder
+![Running XamlIslands inside a win32 window](helloFromXamlIslands.png)

@@ -6,7 +6,7 @@ cppwinrt.exe @cppwinrt_plat.rsp
 @echo Create output folder
 if not exist build mkdir build
 
-@echo Compile with Clang 9.0.0
+@echo Compile with Clang >= 9.0.0
 clang -v
 
 @echo Create binary
