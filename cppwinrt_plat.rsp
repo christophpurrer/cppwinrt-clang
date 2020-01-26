@@ -1,4 +1,5 @@
--verbose  -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.AI.MachineLearning.MachineLearningContract\2.0.0.0\Windows.AI.MachineLearning.MachineLearningContract.winmd"
+-verbose 
+-in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.AI.MachineLearning.MachineLearningContract\2.0.0.0\Windows.AI.MachineLearning.MachineLearningContract.winmd"
 -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.AI.MachineLearning.Preview.MachineLearningPreviewContract\2.0.0.0\Windows.AI.MachineLearning.Preview.MachineLearningPreviewContract.winmd"
 -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.ApplicationModel.Activation.ActivatedEventsContract\1.0.0.0\Windows.ApplicationModel.Activation.ActivatedEventsContract.winmd"
 -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.ApplicationModel.Activation.ActivationCameraSettingsContract\1.0.0.0\Windows.ApplicationModel.Activation.ActivationCameraSettingsContract.winmd"
@@ -82,4 +83,4 @@
 -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.UI.Xaml.Core.Direct.XamlDirectContract\2.0.0.0\Windows.UI.Xaml.Core.Direct.XamlDirectContract.winmd"
 -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.UI.Xaml.Hosting.HostingContract\4.0.0.0\Windows.UI.Xaml.Hosting.HostingContract.winmd"
 -in "C:\Program Files (x86)\Windows Kits\10\References\10.0.18362.0\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract\2.0.0.0\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract.winmd" 
--out "Generated Files"
+-out "Generated Files\."
