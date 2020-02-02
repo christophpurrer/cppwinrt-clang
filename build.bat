@@ -10,7 +10,7 @@ if not exist build mkdir build
 clang -v
 
 @echo Create binary
-clang -I "Generated Files" -D_WINDOWS -DUNICODE -D_UNICODE main.cpp -Xclang -std=c++2a -Xclang -Wno-delete-non-virtual-dtor -o build\cppwinrt-clang.exe -L "%WINDOWS_SDK%\um\x64" -Wl,kernel32.lib,user32.lib,windowsapp.lib
+clang -I "Generated Files" -D_WINDOWS -DUNICODE -D_UNICODE main.cpp -Xclang -std=c++17 -Xclang -Wno-delete-non-virtual-dtor -fcoroutines-ts -o build\cppwinrt-clang.exe -L "%WINDOWS_SDK%\um\x64" -Wl,kernel32.lib,user32.lib,windowsapp.lib
 
 @echo Embed manifest
 :: https://docs.microsoft.com/en-us/cpp/build/how-to-embed-a-manifest-inside-a-c-cpp-application?view=vs-2019
