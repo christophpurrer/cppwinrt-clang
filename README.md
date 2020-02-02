@@ -29,8 +29,8 @@ if not exist build mkdir build
 3.) Compile with Clang
 ```
 set WINDOWS_SDK=C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0
-clang -I "Generated Files" -D_WINDOWS -DUNICODE -D_UNICODE main.cpp -Xclang -std=c++2a \
--Xclang -Wno-delete-non-virtual-dtor -o build\cppwinrt-clang.exe \
+clang -I "Generated Files" -D_WINDOWS -DUNICODE -D_UNICODE main.cpp -Xclang -std=c++17 \
+-Xclang -Wno-delete-non-virtual-dtor -fcoroutines-ts -o build\cppwinrt-clang.exe \
 -L "%WINDOWS_SDK%\um\x64" -Wl,kernel32.lib,user32.lib,windowsapp.lib
 ```
 
