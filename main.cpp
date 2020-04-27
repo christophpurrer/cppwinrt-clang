@@ -64,36 +64,36 @@ struct NativeWindow {
 
     // XAML Island section
     // Initialize the Xaml Framework's corewindow for current thread
-    windowsXamlManager_ = WindowsXamlManager::InitializeForCurrentThread();
+    // windowsXamlManager_ = WindowsXamlManager::InitializeForCurrentThread();
 
     // This DesktopWindowXamlSource is the object that enables a non-UWP
     // desktop application to host UWP controls in any UI element that is
     // associated with a window handle (HWND).
-    desktopSource_ = DesktopWindowXamlSource{};
+    // desktopSource_ = DesktopWindowXamlSource{};
     // Get handle to corewindow
-    auto interop = desktopSource_.as<IDesktopWindowXamlSourceNative>();
+    // auto interop = desktopSource_.as<IDesktopWindowXamlSourceNative>();
     // Parent the DesktopWindowXamlSource object to current window
-    check_hresult(interop->AttachToWindow(hWnd_));
+    // check_hresult(interop->AttachToWindow(hWnd_));
 
     // Get the new child window's hwnd
-    interop->get_WindowHandle(&hWndXamlIsland_);
+    // interop->get_WindowHandle(&hWndXamlIsland_);
     // Update the xaml island window size becuase initially is 0,0
-    SetWindowPos(hWndXamlIsland_, 0, 0, 0, width, height, SWP_SHOWWINDOW);
+    // SetWindowPos(hWndXamlIsland_, 0, 0, 0, width, height, SWP_SHOWWINDOW);
 
     // Creating the Xaml content
-    Windows::UI::Xaml::Controls::StackPanel xamlContainer;
-    xamlContainer.Background(Windows::UI::Xaml::Media::SolidColorBrush{
-        Windows::UI::Colors::LightGray()});
+    // Windows::UI::Xaml::Controls::StackPanel xamlContainer;
+    // xamlContainer.Background(Windows::UI::Xaml::Media::SolidColorBrush{
+        // Windows::UI::Colors::LightGray()});
 
-    Windows::UI::Xaml::Controls::TextBlock tb;
-    tb.Text(L"Hello World from Xaml Islands!");
-    tb.VerticalAlignment(Windows::UI::Xaml::VerticalAlignment::Center);
-    tb.HorizontalAlignment(Windows::UI::Xaml::HorizontalAlignment::Center);
-    tb.FontSize(48);
+    // Windows::UI::Xaml::Controls::TextBlock tb;
+    // tb.Text(L"Hello World from Xaml Islands!");
+    // tb.VerticalAlignment(Windows::UI::Xaml::VerticalAlignment::Center);
+    // tb.HorizontalAlignment(Windows::UI::Xaml::HorizontalAlignment::Center);
+    // tb.FontSize(48);
 
-    xamlContainer.Children().Append(tb);
-    xamlContainer.UpdateLayout();
-    desktopSource_.Content(xamlContainer);
+    // xamlContainer.Children().Append(tb);
+    // xamlContainer.UpdateLayout();
+    // desktopSource_.Content(xamlContainer);
     // End XAML Island section
 
     ShowWindow(hWnd_, SW_SHOW);
@@ -118,9 +118,9 @@ private:
   HWND hWnd_ = nullptr;
   // This Hwnd will be the window handler for the Xaml Island: A child window
   // that contains Xaml.
-  HWND hWndXamlIsland_ = nullptr;
-  WindowsXamlManager windowsXamlManager_ = nullptr;
-  DesktopWindowXamlSource desktopSource_ = nullptr;
+  // HWND hWndXamlIsland_ = nullptr;
+  // WindowsXamlManager windowsXamlManager_ = nullptr;
+  // DesktopWindowXamlSource desktopSource_ = nullptr;
 };
 
 int CALLBACK WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,

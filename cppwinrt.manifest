@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" manifestVersion="1.0">
+  <asmv3:file name="Microsoft.ReactNative.dll">
+    <activatableClass name="Microsoft.ReactNative.DynamicAutomationPeer" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.XamlHelper" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.ViewPanel" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.ReactApplicationDelegate" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.ReactInstance" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.ReactNativeHost" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.DynamicAutomationProperties" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.ViewControl" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.ReactApplication" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.ReactRootView" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.ReactInstanceSettings" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+    <activatableClass name="Microsoft.ReactNative.ReactInstanceManager" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+  </asmv3:file>
+  <asmv3:file name="Microsoft.Toolkit.Win32.UI.XamlHost.dll">
+    <activatableClass name="Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"></activatableClass>
+  </asmv3:file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
       <maxversiontested Id="10.0.18362.0"/>
